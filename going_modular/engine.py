@@ -67,6 +67,8 @@ def train(model: torch.nn.Module,
           loss_fn: torch.nn.Module,
           epochs: int,
           device: torch.device) -> Dict[str, List]:
+    
+  model.to(device)
   
   results = {"train_loss": [],
       "train_acc": [],
